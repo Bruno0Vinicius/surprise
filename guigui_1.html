@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa para Você</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffebee; /* Rosa claro para um toque de amor */
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            background: #ffffff; /* Fundo branco para contraste */
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 90%;
+            max-width: 600px; /* Limita a largura máxima para telas grandes */
+        }
+        h1 {
+            color: #d32f2f; /* Vermelho escuro para paixão e amor */
+            font-size: 24px; /* Tamanho menor para celular */
+        }
+        p {
+            color: #d32f2f; /* Vermelho escuro para paixão e amor */
+            font-size: 18px; /* Tamanho menor para celular */
+        }
+        button {
+            margin-top: 20px;
+            padding: 15px 25px;
+            font-size: 18px;
+            border: none;
+            background-color: #d32f2f; /* Vermelho escuro para paixão e amor */
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #b71c1c; /* Vermelho mais escuro no hover */
+        }
+        #player, #image-container {
+            display: none; /* Oculta o player e as imagens inicialmente */
+            margin-top: 20px;
+        }
+        .play-button {
+            padding: 20px 40px;
+            font-size: 24px;
+            background-color: #d32f2f; /* Vermelho escuro para paixão e amor */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+        .play-button:hover {
+            background-color: #b71c1c; /* Vermelho mais escuro no hover */
+        }
+        .image-container {
+            display: flex;
+            flex-direction: column; /* Coloca as imagens em coluna para celular */
+            align-items: center;
+            gap: 20px; /* Espaço entre as imagens */
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 100%; /* Imagens ocupam 100% da largura do container */
+            max-width: 300px; /* Limita o tamanho máximo das imagens */
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Para Minha Esposa Linda 💖</h1>
+        <p id="mensagem">Clique no botão para ver sua surpresa!</p>
+        <button class="play-button" onclick="playMusic()">💖!</button>
+        
+        <!-- Player de música -->
+        <div id="player">
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/destakmusical/32-tom-jobim-miucha-e-vinicius?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&auto_play=true"></iframe>
+        </div>
+
+        <!-- Container para as imagens -->
+        <div id="image-container" class="image-container">
+            <img src="imagem1.jpeg" alt="Imagem 1">
+            <img src="imagem2.jpeg" alt="Imagem 2">
+        </div>
+    </div>
+
+    <script>
+        function playMusic() {
+            // Mudando a mensagem
+            document.getElementById("mensagem").innerHTML = "Oi Guigui, Se tá vendo isso significa que achou meu hiperfoco de sábado, tô com saudades <3 💕";
+            
+            // Exibindo o player do SoundCloud com a música
+            document.getElementById("player").style.display = "block";
+            
+            // Exibindo as imagens
+            document.getElementById("image-container").style.display = "flex";
+        }
+    </script>
+</body>
+</html>
